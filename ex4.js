@@ -1,2 +1,5 @@
-let bat_funcao = texto => texto.split('').reverse().join('');
-bat_funcao('ANAMES AMIXORP AD OCILBUP OSRUCSID UES ME OAHLABOB OTIEFERP ORANISSASSA')
+function reverseText(text) {
+  var result = text.split('').reverse().join('');
+  console.log(result)
+}
+reverseText('ANAMES AMIXORP AD OCILBUP OSRUCSID UES ME OAHLABOB OTIEFERP ORANISSASSA')

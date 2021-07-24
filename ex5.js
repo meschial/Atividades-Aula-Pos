@@ -1,11 +1,14 @@
-let newImc = (peso, altura) => {
-   imc = peso/(altura*altura);
+function calcImc(alt, peso) {
+   var imc = peso / (alt*alt);
 
-   if (imc <= 18.5) console.log(`Seu IMC é:${imc} sua classificação é: Magreza`);
-   else if (imc <= 24.9) console.log(`Seu IMC é:${imc} sua classificação é: Normal!`);
-   else if (imc <= 29.9) console.log(`Seu IMC é:${imc} sua classificação é: Sobrepeso 1`);
-   else if (imc <= 39.9) console.log(`Seu IMC é:${imc} sua classificação é: Obesidade 2`);
-   else if (imc >= 40) console.log(`Seu IMC é:${imc} sua classificação é: Obesidade Grave 3`);
-  
-} 
-newImc(85,1.83)
+   switch (true) {
+      case (imc <= 18.5): return console.log(`Seu IMC é:${imc} sua classificação é: Magreza`);
+      case (imc <= 24.9): return console.log(`Seu IMC é:${imc} sua classificação é: Normal!`);
+      case (imc <= 29.9): return console.log(`Seu IMC é:${imc} sua classificação é: Sobrepeso 1`);
+      case (imc <= 39.9): return console.log(`Seu IMC é:${imc} sua classificação é: Obesidade 2`);
+      case (imc >= 40): return console.log(`Seu IMC é:${imc} sua classificação é: Obesidade Grave 3`);
+      default: return console.log('Não foi possível calcular seu IMC.');
+    }
+}
+
+calcImc(1.85, 65);
